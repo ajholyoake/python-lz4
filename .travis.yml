@@ -13,10 +13,12 @@ script:
   - flake8 --ignore=E501 lz4
   - flake8 --ignore=E501 tests
   - flake8 --ignore=E501 setup.py
+  - pip install codecov
   - tox
   - pip install .
   - pip install .[tests]
   - make -C docs doctest html
+  - codecov
 deploy:
   - provider: pypi
     # server: https://test.pypi.org/legacy/

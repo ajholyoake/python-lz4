@@ -132,6 +132,7 @@ if sys.version_info < (3, 0):
 # install testing dependencies.
 tests_require = [
     'pytest',
+    'pytest-cov',
     'psutil',
 ],
 
