@@ -79,7 +79,7 @@ def test_frame_open_decompress_mem_usage(data):
 
             if prev_snapshot:
                 stats = snapshot.compare_to(prev_snapshot, 'lineno')
-                assert stats[0].size_diff < (1024 * 10)
+                assert stats[0].size_diff < (1024 * 20)
 
             prev_snapshot = snapshot
 
